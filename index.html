@@ -1,0 +1,214 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+      <script type="text/javascript">
+
+      window.onload = function () {
+         var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Grand Slam Titles Won by Roger Federer"    
+      },
+	  //data source: https://en.wikipedia.org/wiki/Big_Four_(tennis)
+      animationEnabled: true,
+      axisY: {
+        title: "Number of Titles"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        dataPoints: [      
+        {y: 5, label: "Australian Open"},
+        {y: 1,  label: "French Open" },
+        {y: 7,  label: "Wimbledon"},
+        {y: 5,  label: "US Open"},      
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+    }
+
+    </script>
+
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+    </head>
+    
+<body>
+    
+  <div id="chartContainer" style="height: 500px; width: 100%;">
+  </div>
+    
+  
+    <h3 id="tennis">Tennis Players</h3>
+   <form>
+Select a player:
+<select id="myPlayers">
+  <option value="federer">Roger Federer</option>
+  <option value="nadal">Rafael Nadal</option>
+  <option value="novak">Novak Djokovic</option>
+  <option value="andy">Andy Murray</option>
+</select>
+</form>
+
+<button type="button" onclick="myPlayers()">Switch Players</button>
+
+<p id="demo"></p>
+    
+    <script>
+	function myPlayers() {
+        var x = document.getElementById("myPlayers").value;
+        
+        if (x == "federer") {
+		addEventListener('click', function(){
+            var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Grand Slam Titles Won by Roger Federer"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Number of Titles"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        dataPoints: [      
+        {y: 5, label: "Australian Open"},
+        {y: 1,  label: "French Open" },
+        {y: 7,  label: "Wimbledon"},
+        {y: 5,  label: "US Open"},      
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+})} if (x == "nadal") {
+        
+        addEventListener('click', function(){
+             var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Grand Slam Titles Won by Rafael Nadal"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Number of Titles"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        dataPoints: [      
+        {y: 2, label: "Australian Open"},
+        {y: 9,  label: "French Open" },
+        {y: 2,  label: "Wimbledon"},
+        {y: 1,  label: "US Open"},      
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+});
+      }  
+	  
+	   if (x == "novak") {
+        
+        addEventListener('click', function(){
+             var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Grand Slam Titles Won by Novak Djokovic"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Number of Titles"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        dataPoints: [      
+       {y: 6, label: "Australian Open"},
+        {y: 1,  label: "French Open" },
+        {y: 3,  label: "Wimbledon"},
+        {y: 2,  label: "US Open"},        
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+});
+      }  
+	  
+	    
+	  
+	   if (x == "andy") {
+        
+        addEventListener('click', function(){
+             var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Grand Slam Titles Won by Andy Murray"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Number of Titles"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        dataPoints: [      
+       {y: 0, label: "Australian Open"},
+        {y: 0,  label: "French Open" },
+        {y: 2,  label: "Wimbledon"},
+        {y: 1,  label: "US Open"},        
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+});
+      } 	  
+	  }
+    </script>
+    
+</body>
+    
+</html>
