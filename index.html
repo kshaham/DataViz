@@ -48,26 +48,28 @@
     
   <div id="chartContainer" style="height: 500px; width: 100%;">
   </div>
-    
-  
-    <h3 id="tennis">Tennis Players</h3>
    <form>
-Select a player:
-<select id="myPlayers">
+<h3>Select a player:</h3>
+     <select name="players">
   <option value="federer">Roger Federer</option>
   <option value="nadal">Rafael Nadal</option>
   <option value="novak">Novak Djokovic</option>
   <option value="andy">Andy Murray</option>
 </select>
-</form>
 
-<button type="button" onclick="myPlayers()">Switch Players</button>
 
 <p id="demo"></p>
     
     <script>
-	function myPlayers() {
-        var x = document.getElementById("myPlayers").value;
+	document.addEventListener('DOMContentLoaded',function() {
+    document.querySelector('select[name="players"]').onchange=changeEventHandler;
+},false);
+
+function changeEventHandler(event) {
+    // You can use “this” to refer to the selected element.
+    if(!event.target.value) alert('Please Select One');
+    else
+        var x = event.target.value;
         
         if (x == "federer") {
 		addEventListener('click', function(){
